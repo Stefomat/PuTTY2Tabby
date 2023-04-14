@@ -8,7 +8,7 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
     $v_user = $p.UserName
     # $v_command = $p.RemoteCommand
     
-    Write-Output "  - name: $v_name
+    Add-Content -Path $output -PassThru -Value "  - name: $v_name
     icon: fas fa-desktop
     options:
       host: $v_host
@@ -18,7 +18,7 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
       privateKeys: []
     weight: -1
     group: SSH
-    type: ssh" >> $output
+    type: ssh"
 }
 
 Read-Host -Prompt "Press any key to continue..."
