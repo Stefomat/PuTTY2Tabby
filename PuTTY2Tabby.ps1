@@ -21,5 +21,4 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
     type: ssh" >> $output
 }
 
-echo "Press any key to continue..."
-$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+Read-Host -Prompt "Press any key to continue..."
