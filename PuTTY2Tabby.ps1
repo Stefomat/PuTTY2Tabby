@@ -20,5 +20,3 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
     group: SSH
     type: ssh"
 }
-
-Read-Host -Prompt "Press any key to continue..."
