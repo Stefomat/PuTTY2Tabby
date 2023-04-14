@@ -1,4 +1,4 @@
-$output = "C:\Users\USERNAME_HERE\Downloads\Sessions.yml"
+$output = "$HOME\Downloads\PuTTY_Sessions.yml"
 $putty = Get-ItemProperty "HKCU:\SOFTWARE\SimonTatham\PuTTY\Sessions\*"
 
 foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
