@@ -6,7 +6,7 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
     $v_host = $p.HostName
     $v_port = $p.PortNumber
     $v_user = $p.UserName
-    $v_command = $p.RemoteCommand
+    # $v_command = $p.RemoteCommand
     
     echo "  - name: $v_name
     icon: fas fa-desktop
