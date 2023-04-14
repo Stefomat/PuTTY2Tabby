@@ -8,7 +8,7 @@ foreach($p in $putty.where({$_.pschildname -ne "Default%20Settings"}) ) {
     $v_user = $p.UserName
     # $v_command = $p.RemoteCommand
     
-    echo "  - name: $v_name
+    Write-Output "  - name: $v_name
     icon: fas fa-desktop
     options:
       host: $v_host
